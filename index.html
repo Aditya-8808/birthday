@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#ff5d8f" />
+  <title>Jiju's Birthday Bash 🎉</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="gold-orb orb-one" aria-hidden="true"></div>
+  <div class="gold-orb orb-two" aria-hidden="true"></div>
+
+  <nav class="nav">
+    <a class="brand" href="#home"><span class="brand-mark">✦</span> JIJU’S BIRTHDAY BASH 🎉</a>
+    <button class="music-button" id="musicButton" type="button" aria-label="Choose background music">♫ <span>Add music</span></button>
+    <input id="musicInput" type="file" accept="audio/*" hidden />
+    <audio id="backgroundMusic" loop></audio>
+  </nav>
+
+  <main>
+    <section class="hero section" id="home">
+      <div class="hero-content reveal">
+        <p class="eyebrow"><span class="eyebrow-line"></span> IT’S YOUR DAY — LET’S PARTY! <span class="eyebrow-line"></span></p>
+        <p class="intro">Officially the coolest Jiju in the family 😎</p>
+        <h1>Happy Birthday,<br><em id="heroName">Jiju</em><span class="gold-dot">!</span></h1>
+        <p class="hero-copy">Good vibes, great memories, cake, and a whole lot of love — this party is all yours! 🥳</p>
+        <button class="primary-button" id="startButton" type="button">LET’S CELEBRATE <span>🎉</span></button>
+        <div class="scroll-note"><span class="scroll-line"></span> SCROLL TO EXPLORE</div>
+      </div>
+      <div class="hero-side-note">BIG LOVE, BIG LAUGHS <span>— MADE JUST FOR YOU</span></div>
+      <div class="hero-index">01 <span>/</span> 04</div>
+    </section>
+
+    <section class="intro-section section" id="message">
+      <div class="section-label reveal"><span>01</span> A LITTLE BIRTHDAY LOVE</div>
+      <div class="message-layout">
+        <div class="message-heading reveal"><p class="eyebrow">A MOMENT TO PAUSE</p><h2>No boring wishes.<br><em>Only good vibes!</em></h2></div>
+        <div class="message-card reveal">
+          <div class="quote-mark">“</div>
+          <p>Happy Birthday, Jiju! 🥳 May your year be packed with laughter, big wins, delicious food, epic adventures, and unlimited reasons to smile. Keep being awesome — today the cake calories don’t count!</p>
+          <p class="signature">by { ADITYA } 😉 <span>💖</span></p>
+          <button class="text-button" id="editMessageButton" type="button">EDIT NAME & MESSAGE ✏️</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="gallery-section section" id="memories">
+      <div class="section-label reveal"><span>02</span> THE FAMILY HIGHLIGHT REEL 📸</div>
+      <div class="gallery-top reveal"><div><p class="eyebrow">GOOD TIMES, GREAT PEOPLE</p><h2>Our favourite<br><em>kind of chaos.</em></h2></div><p class="gallery-description">Add your funniest selfies, family pics, trips, and legendary moments. This gallery is about to get personal!</p></div>
+      <div class="gallery-grid" id="galleryGrid">
+        <button class="photo-card photo-placeholder large" type="button" data-upload-prompt><span class="placeholder-icon">＋</span><span>Add your favourite photo</span><small>MAKE THIS MEMORY YOURS</small></button>
+        <button class="photo-card photo-placeholder" type="button" data-upload-prompt><span class="placeholder-icon">＋</span><span>A moment together</span><small>PHOTO 02</small></button>
+        <button class="photo-card photo-placeholder" type="button" data-upload-prompt><span class="placeholder-icon">＋</span><span>Family & laughter</span><small>PHOTO 03</small></button>
+      </div>
+      <div class="gallery-actions reveal"><label class="outline-button" for="photoInput">＋ ADD YOUR PHOTOS 📸 <input id="photoInput" type="file" accept="image/*" multiple hidden></label><span class="micro-copy">Choose photos from your device · stored in this page while it's open</span></div>
+    </section>
+
+    <section class="finale-section section" id="finale">
+      <div class="finale-glow" aria-hidden="true"></div>
+      <div class="section-label reveal"><span>03</span> CAKE TIME! 🎂</div>
+      <div class="finale-content reveal">
+        <p class="eyebrow">MAKE A WISH</p>
+        <div class="cake" aria-label="Illustration of a birthday cake"><div class="candles"><span class="candle"><i></i></span><span class="candle"><i></i></span><span class="candle"><i></i></span></div><div class="cake-top"></div><div class="cake-layer layer-one"></div><div class="cake-layer layer-two"></div><div class="cake-plate"></div></div>
+        <h2>Here’s to more<br><em>fun, food & memories!</em></h2>
+        <p>Make a wish, Jiju — and save us a slice of cake. 🍰</p>
+        <button class="primary-button" id="wishButton" type="button">MAKE A WISH <span>✦</span></button>
+        <p class="wish-message" id="wishMessage" aria-live="polite">Close your eyes, make a wish, and let the good things find you.</p>
+      </div>
+      <div class="finale-footer"><span>MADE WITH LOVE</span><span>HAPPY BIRTHDAY, <b id="footerName">JIJU</b> ✦</span><span>CAKE. CONFETTI. REPEAT.</span></div>
+    </section>
+  </main>
+
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer"><button class="lightbox-close" id="lightboxClose" aria-label="Close photo">×</button><img id="lightboxImage" alt="Selected memory"></div>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="script.js"></script>
+</body>
+</html>
